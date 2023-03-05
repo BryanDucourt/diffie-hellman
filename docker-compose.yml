@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  server:
+    build: server_compose
+    tty: true
+    stdin_open: true
+    sysctls:
+      - net.ipv4.tcp_timestamps=0
+
+  client:
+    build: client_compose
+    tty: true
+    stdin_open: true
+    links:
+      - server
+    sysctls:
+      - net.ipv4.tcp_timestamps=0

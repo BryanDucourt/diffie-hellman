@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+
+COPY ./DH_SERVER /home/DH_SERVER
+
+RUN chmod 777 /home/DH_SERVER

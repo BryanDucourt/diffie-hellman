@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+
+COPY ./DH_CLIENT /home/DH_CLIENT
+
+RUN chmod 777 /home/DH_CLIENT
